@@ -10,13 +10,8 @@ func wordfrequency(sentence string) (string,int){
 
 	splitedwords := strings.Split(sentence, " ")
 
-	for i:=0;i<len(splitedwords);i++{
-		if _, found := m[splitedwords[i]]; found {
-			m[splitedwords[i]]=m[splitedwords[i]]+1
-
-		}else{
-			m[splitedwords[i]]=1
-		}
+	for _,word:= range splitedwords{
+			m[word]=m[word]+1
 	}
     
 	max:=0
